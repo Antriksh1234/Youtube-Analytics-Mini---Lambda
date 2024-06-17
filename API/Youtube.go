@@ -116,6 +116,10 @@ func (y Youtube) GetVideoCommentsByID(videoID string) ([]types.Comment, error) {
 				Likes:       commentLikes,
 			}
 			Comments = append(Comments, Comment)
+
+			if len(Comments) > 200 {
+				return Comments, nil
+			}
 		}
 
 		if response.NextPageToken == "" {
