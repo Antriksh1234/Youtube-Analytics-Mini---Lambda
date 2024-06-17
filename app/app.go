@@ -54,7 +54,6 @@ func (app *App) GetFeedbackOfYoutubeVideo(event events.APIGatewayProxyRequest) (
 	youtubeVideo := app.YoutubeAPI.GetVideoByID(videoID)
 	youtubeChannel := app.YoutubeAPI.GetChannelByID(youtubeVideo.ChannelID)
 	youtubeVideo.Comments, _ = app.YoutubeAPI.GetVideoCommentsByID(videoID)
-	youtubeVideo.NumberOfComments = uint64(len(youtubeVideo.Comments))
 
 	//Lets just return top comments
 	youtubeVideo.Comments = types.GetTopCommentsByLikes(youtubeVideo.Comments)

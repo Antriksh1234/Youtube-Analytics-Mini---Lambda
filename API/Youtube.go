@@ -56,6 +56,7 @@ func (y Youtube) GetVideoByID(videoID string) types.Video {
 	video.Likes = statistics.LikeCount
 	video.ChannelID = snippet.ChannelId
 	video.Description = snippet.Description
+	video.NumberOfComments = statistics.CommentCount
 
 	log.Println("GetVideoByID: END; Time taken: ", time.Since(start))
 	return video
