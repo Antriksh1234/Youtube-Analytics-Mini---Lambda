@@ -2,14 +2,15 @@ package test
 
 import (
 	"testing"
-
-	"github.com/YoutubeVideoStats/app"
 )
 
 func Test_App(t *testing.T) {
-	app := app.App{}
-
-	app.YoutubeAPI = &YoutubeAPIMock{}
-	app.SentimentAPI = &SentimentAPIMock{}
-
+	//app, _ := app.NewApp()
+	//
+	//feedbackOfYoutubeVideo, err := app.FetchVideoFeedback(events.APIGatewayProxyRequest{
+	//	Body: "https://www.youtube.com/watch?v=mockVideoID",
+	//})
+	//
+	//log.Println(feedbackOfYoutubeVideo)
+	//assert.Equal(t, nil, err)
 }

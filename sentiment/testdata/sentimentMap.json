@@ -1,0 +1,8 @@
+{
+  "Good Video": "POSITIVE",
+  "Bad Video": "NEGATIVE",
+  "The editing was awesome!!": "POSITIVE",
+  "Could have been made a little better": "NEUTRAL",
+  "I liked editing but not the background noise": "MIXED",
+  "Please improve your content quality, it is not upto the mark!!": "NEGATIVE"
+}
